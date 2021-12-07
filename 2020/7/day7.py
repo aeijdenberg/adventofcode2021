@@ -6,7 +6,6 @@ for line in open('input'):
     for option in options:
         if option != 'no other bags':
             rules[outer].add(option.rsplit(' ', 1)[0].split(' ', 1)[1])
-            #rules[outer].append((int(option.split(' ', 1)[0]), option.rsplit(' ', 1)[0].split(' ', 1)[1]))
 
 answers = set()
 

@@ -12,7 +12,6 @@ while len(journeys):
     j = journeys.pop()
     for p in edges[j[-1]]:
         if p == 'end':
-            print(j)
             finishes += 1
         elif p == 'start': # hmm? can you do this?
             pass # let's assume not

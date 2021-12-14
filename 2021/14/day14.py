@@ -11,6 +11,7 @@ for line in open('input'):
         state = 1
 
 for i in range(10):
+    print(len(code))
     next = []
     for i in range(len(code) - 1):
         next.append(code[i])

@@ -30,7 +30,6 @@ target = '%i,%i' % (len(things[0]) - 1, len(things) - 1)
 dist = {'0,0': 0}
 todo = set(['0,0'])
 while len(todo):
-    # print(len(todo))
     k = todo.pop()
     v = dist[k]
     for pd, cst in dests[k].items():

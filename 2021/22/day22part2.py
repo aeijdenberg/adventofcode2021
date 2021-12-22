@@ -14,9 +14,9 @@ def split_individual(xyz, dim, v):
 def does_intersect(t, u):
     for dim in range(3):
         a, b = t[dim], u[dim]
-        if b[1] < a[0]:
+        if b[1] <= a[0]:
             return False
-        if b[0] > a[1]:
+        if b[0] >= a[1]:
             return False
     return True
 

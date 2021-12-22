@@ -65,7 +65,6 @@ for line in open('input'):
 
     instruction, bits = line.strip().split(' ')
     t = tuple(list(tuple(list(idx + int(x) for idx, x in enumerate(dim.split('=')[1].split('..')))) for dim in bits.split(',')))
-    t = filter(t, 50)
     if t is not None:
         if instruction == 'on':
             c.turn_on(t)

@@ -179,5 +179,3 @@ while z is not None:
 for s in n[::-1]:
     print_it(from_state(s))
     print(scores[s])
-
-

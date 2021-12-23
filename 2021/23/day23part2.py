@@ -3,6 +3,8 @@ def print_it(s):
 #############
 #ijklmnopqrs#
 ###a#b#c#d###
+  #t#u#v#w#
+  #x#y#z#_#
   #e#f#g#h#
   #########
 """
@@ -10,22 +12,22 @@ def print_it(s):
         print(''.join(s[ch] if ch in s else ch for ch in l))
 
 exits = set([
-    'ijkae',
-    'ijklmbf',
-    'ijklmnocg',
-    'ijklmnopqdh',
-    'eaklmnopqrs',
-    'fbmnopqrs',
-    'gcopqrs',
-    'hdqrs',
+    'ijkatxe',
+    'ijklmbuyf',
+    'ijklmnocvzg',
+    'ijklmnopqdw_h',
+    'extaklmnopqrs',
+    'fyubmnopqrs',
+    'gzvcopqrs',
+    'h_wdqrs',
 ])
-rooms = 'abcdefgh'
+rooms = 'abcdefghtuvwxyz_'
 halls = 'ijlnprs'
 accept_dests = {
-    'A': 'ae',
-    'B': 'bf',
-    'C': 'cg',
-    'D': 'dh',
+    'A': 'atxe',
+    'B': 'buyf',
+    'C': 'cvzg',
+    'D': 'dw_h',
 }
 
 target = {
@@ -48,6 +50,14 @@ target = {
     'q': '.',
     'r': '.',
     's': '.',
+    't': 'A',
+    'u': 'B',
+    'v': 'C',
+    'w': 'D',
+    'x': 'A',
+    'y': 'B',
+    'z': 'C',
+    '_': 'D',
 }
 lines = open('input').read().split('\n')
 state = {
@@ -70,6 +80,14 @@ state = {
     'q': '.',
     'r': '.',
     's': '.',
+    't': 'D',
+    'u': 'C',
+    'v': 'B',
+    'w': 'A',
+    'x': 'D',
+    'y': 'B',
+    'z': 'A',
+    '_': 'C',
 }
 energy = {
     'A': 1,
@@ -78,7 +96,7 @@ energy = {
     'D': 1000,
 }
 
-all_spots = 'abcdefghijklmnopqrs'
+all_spots = 'abcdefghijklmnopqrstuvwxyz_'
 all_move_spots = rooms + halls
 
 all_moves = set([

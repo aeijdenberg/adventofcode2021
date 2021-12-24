@@ -142,11 +142,17 @@ while len(todo):
     if sb == w:
         print(scores[w])
         continue
+    else:
+        best = scores.get(w, None)
+        if best is not None:
+            if scores[sb] >= best:
+                continue
     s = from_state(sb)
     c += 1
-    if c % 1000 == 0:
+    if c % 10000 == 0:
         print(c, len(todo))
 
+    done_for_s = False
     for p, q in all_moves:
         if s[p] == '.':
             continue
@@ -184,7 +190,6 @@ while len(todo):
             pars[new_state] = sb
             scores[new_state] = cur_e
             todo.add(new_state)
-
 
 print(c)
 
